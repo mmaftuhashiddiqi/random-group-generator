@@ -1,0 +1,149 @@
+*, body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+.input-menu {
+    overflow: auto;
+    width: 25vw;
+    height: 100vh;
+    background-color: #177ac0;
+}
+
+.input-heading {
+    display: inline-block;
+    margin: 20px;
+    color: #FFF;
+    text-shadow: 0 0 5px #777;
+    font-size: 25px;
+}
+
+#input-name {
+    display: block;
+    width: 17vw;
+    height: 37vh;
+    margin: auto;
+    padding: 10px;
+    border: 3px solid #123456;
+    border-radius: 10px;
+}
+
+.count-heading {
+    display: block;
+    margin: 20px;
+    color: #FFF;
+    text-shadow: 0 0 5px #777;
+    font-size: 25px;
+}
+
+.group-count {
+    margin: 20px;
+    text-align: center;
+}
+
+button {
+    display: inline-block;
+    width: 60px;
+    height: 40px;
+    margin-bottom: 5px;
+    cursor: pointer;
+    background-color: #F1F5F8;
+    border: 3px solid #123456;
+    border-radius: 10px;
+}
+
+input {
+    display: inline-block;
+    width: 115px;
+    height: 30px;
+    background-color: #F1F5F8;
+    border: 3px solid #123456;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.generate-heading {
+    display: block;
+    margin: 20px;
+    margin-top: -5px;
+    color: #FFF;
+    text-shadow: 0 0 5px #777;
+    font-size: 25px;
+}
+
+.generate-button {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.generate-button button {
+    width: 130px;
+    letter-spacing: 2px;
+}
+
+.line-menu {
+    display: flex;
+    margin-top: -100vh;
+    margin-left: 25vw;
+    width: 1vw;
+    height: 100vh;
+    background-color: #123456;
+}
+
+.random-group-results {
+    display: flex;
+    margin-top: -100vh;
+    margin-left: 26vw;
+    width: 74vw;
+    height: 100vh;
+    background-color: #F1F5F8;
+}
+
+.results-heading {
+    width: max-content;
+    height: min-content;
+    margin: 20px 30px;
+    color: #123456;
+}
+
+.group-results {
+    width: calc(74vw - 60px);
+    height: calc(100vh - 124px);
+    box-sizing: border-box;
+    margin: 20px 30px;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 7px #EEE;
+    background-color: white;
+    overflow: auto;
+    /* text-align: center; */
+}
+
+.group-container {
+    display: inline-block;
+    margin: 5px;
+}
+
+.group {
+    border: 2px solid #123456;
+    border-collapse: collapse;
+    padding: 10px;
+}
+
+.group th {
+    border: 2px solid #123456;
+    padding: 10px;
+    background: #123456;
+    color: #F1F5F8;
+}
+
+.group td {
+    border: 2px solid #123456;
+    padding: 10px;
+    line-height: 25px;
+}
+
+.group td li {
+    list-style-type: decimal;
+}
