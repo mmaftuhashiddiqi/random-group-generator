@@ -57,6 +57,14 @@ button:active {
     background-color: #ccddee;
 }
 
+.button-visited {
+    background-color: #ccddee;
+}
+
+.input-visited {
+    background-color: #ccddee;
+}
+
 input {
     display: inline-block;
     width: 115px;

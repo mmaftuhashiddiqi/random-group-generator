@@ -13,24 +13,79 @@ const groupResults = document.querySelector('.group-results');
 let groupCount;
 groupCount2.addEventListener('click', function() {
     groupCount = 2;
+    groupCountCustom.value = '';
+    groupCount2.classList.add('button-visited');
+    groupCount3.classList.remove('button-visited');
+    groupCount4.classList.remove('button-visited');
+    groupCount5.classList.remove('button-visited');
+    groupCount6.classList.remove('button-visited');
+    groupCount7.classList.remove('button-visited');
+    groupCountCustom.classList.remove('input-visited');
 });
 groupCount3.addEventListener('click', function() {
     groupCount = 3;
+    groupCountCustom.value = '';
+    groupCount3.classList.add('button-visited');
+    groupCount2.classList.remove('button-visited');
+    groupCount4.classList.remove('button-visited');
+    groupCount5.classList.remove('button-visited');
+    groupCount6.classList.remove('button-visited');
+    groupCount7.classList.remove('button-visited');
+    groupCountCustom.classList.remove('input-visited');
 });
 groupCount4.addEventListener('click', function() {
     groupCount = 4;
+    groupCountCustom.value = '';
+    groupCount4.classList.add('button-visited');
+    groupCount2.classList.remove('button-visited');
+    groupCount3.classList.remove('button-visited');
+    groupCount5.classList.remove('button-visited');
+    groupCount6.classList.remove('button-visited');
+    groupCount7.classList.remove('button-visited');
+    groupCountCustom.classList.remove('input-visited');
 });
 groupCount5.addEventListener('click', function() {
     groupCount = 5;
+    groupCountCustom.value = '';
+    groupCount5.classList.add('button-visited');
+    groupCount2.classList.remove('button-visited');
+    groupCount3.classList.remove('button-visited');
+    groupCount4.classList.remove('button-visited');
+    groupCount6.classList.remove('button-visited');
+    groupCount7.classList.remove('button-visited');
+    groupCountCustom.classList.remove('input-visited');
 });
 groupCount6.addEventListener('click', function() {
     groupCount = 6;
+    groupCountCustom.value = '';
+    groupCount6.classList.add('button-visited');
+    groupCount2.classList.remove('button-visited');
+    groupCount3.classList.remove('button-visited');
+    groupCount4.classList.remove('button-visited');
+    groupCount5.classList.remove('button-visited');
+    groupCount7.classList.remove('button-visited');
+    groupCountCustom.classList.remove('input-visited');
 });
 groupCount7.addEventListener('click', function() {
     groupCount = 7;
+    groupCountCustom.value = '';
+    groupCount7.classList.add('button-visited');
+    groupCount2.classList.remove('button-visited');
+    groupCount3.classList.remove('button-visited');
+    groupCount4.classList.remove('button-visited');
+    groupCount5.classList.remove('button-visited');
+    groupCount6.classList.remove('button-visited');
+    groupCountCustom.classList.remove('input-visited');
 });
 groupCountCustom.addEventListener('input', function() {
     groupCount = parseInt(groupCountCustom.value);
+    groupCountCustom.classList.add('input-visited');
+    groupCount2.classList.remove('button-visited');
+    groupCount3.classList.remove('button-visited');
+    groupCount4.classList.remove('button-visited');
+    groupCount5.classList.remove('button-visited');
+    groupCount6.classList.remove('button-visited');
+    groupCount7.classList.remove('button-visited');
 });
 
 
@@ -40,8 +95,16 @@ generateButton.addEventListener('click', function() {
     const members = inputName.value.split('\n');
     const randomMembers = members.sort(() => Math.random() - 0.5);
 
+    if (groupCount < 0) {
+        groupCount = 0;
+    }
+
     if (groupCount > randomMembers.length) {
         groupCount = randomMembers.length;
+    }
+    
+    if (randomMembers.length === 1 && randomMembers[0] === "") {
+        groupCount = undefined;
     }
 
     const part = (a, n) => {
@@ -62,9 +125,7 @@ generateButton.addEventListener('click', function() {
                 <tbody>
                     <tr>
                         <td>
-                            ${
-                                resultMembers[i].map(member => `<li>${member}</li>`).join('')
-                            }
+                            ${resultMembers[i].map(member => `<li>${member}</li>`).join('')}
                         </td>
                     </tr>
                 </tbody>
