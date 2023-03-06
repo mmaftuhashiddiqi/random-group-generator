@@ -1,4 +1,5 @@
 const inputName = document.getElementById('input-name');
+const groupCountElement = document.querySelectorAll('.group-count-element')
 const groupCount2 = document.querySelector('.group-count-2');
 const groupCount3 = document.querySelector('.group-count-3');
 const groupCount4 = document.querySelector('.group-count-4');
@@ -11,81 +12,70 @@ const groupResults = document.querySelector('.group-results');
 
 
 let groupCount;
+
 groupCount2.addEventListener('click', function() {
     groupCount = 2;
     groupCountCustom.value = '';
-    groupCount2.classList.add('button-visited');
-    groupCount3.classList.remove('button-visited');
-    groupCount4.classList.remove('button-visited');
-    groupCount5.classList.remove('button-visited');
-    groupCount6.classList.remove('button-visited');
-    groupCount7.classList.remove('button-visited');
-    groupCountCustom.classList.remove('input-visited');
+    for (let i = 0; i < groupCountElement.length; i++) {
+        groupCountElement[i].classList.remove('group-count-visited');
+    }
+    groupCount2.classList.add('group-count-visited');
 });
+
 groupCount3.addEventListener('click', function() {
     groupCount = 3;
     groupCountCustom.value = '';
-    groupCount3.classList.add('button-visited');
-    groupCount2.classList.remove('button-visited');
-    groupCount4.classList.remove('button-visited');
-    groupCount5.classList.remove('button-visited');
-    groupCount6.classList.remove('button-visited');
-    groupCount7.classList.remove('button-visited');
-    groupCountCustom.classList.remove('input-visited');
+    for (let i = 0; i < groupCountElement.length; i++) {
+        groupCountElement[i].classList.remove('group-count-visited');
+    }
+    groupCount3.classList.add('group-count-visited');
 });
+
 groupCount4.addEventListener('click', function() {
     groupCount = 4;
     groupCountCustom.value = '';
-    groupCount4.classList.add('button-visited');
-    groupCount2.classList.remove('button-visited');
-    groupCount3.classList.remove('button-visited');
-    groupCount5.classList.remove('button-visited');
-    groupCount6.classList.remove('button-visited');
-    groupCount7.classList.remove('button-visited');
-    groupCountCustom.classList.remove('input-visited');
+    for (let i = 0; i < groupCountElement.length; i++) {
+        groupCountElement[i].classList.remove('group-count-visited');
+    }
+    groupCount4.classList.add('group-count-visited');
 });
+
 groupCount5.addEventListener('click', function() {
     groupCount = 5;
     groupCountCustom.value = '';
-    groupCount5.classList.add('button-visited');
-    groupCount2.classList.remove('button-visited');
-    groupCount3.classList.remove('button-visited');
-    groupCount4.classList.remove('button-visited');
-    groupCount6.classList.remove('button-visited');
-    groupCount7.classList.remove('button-visited');
-    groupCountCustom.classList.remove('input-visited');
+    for (let i = 0; i < groupCountElement.length; i++) {
+        groupCountElement[i].classList.remove('group-count-visited');
+    }
+    groupCount5.classList.add('group-count-visited');
 });
+
 groupCount6.addEventListener('click', function() {
     groupCount = 6;
     groupCountCustom.value = '';
-    groupCount6.classList.add('button-visited');
-    groupCount2.classList.remove('button-visited');
-    groupCount3.classList.remove('button-visited');
-    groupCount4.classList.remove('button-visited');
-    groupCount5.classList.remove('button-visited');
-    groupCount7.classList.remove('button-visited');
-    groupCountCustom.classList.remove('input-visited');
+    for (let i = 0; i < groupCountElement.length; i++) {
+        groupCountElement[i].classList.remove('group-count-visited');
+    }
+    groupCount6.classList.add('group-count-visited');
 });
+
 groupCount7.addEventListener('click', function() {
     groupCount = 7;
     groupCountCustom.value = '';
-    groupCount7.classList.add('button-visited');
-    groupCount2.classList.remove('button-visited');
-    groupCount3.classList.remove('button-visited');
-    groupCount4.classList.remove('button-visited');
-    groupCount5.classList.remove('button-visited');
-    groupCount6.classList.remove('button-visited');
-    groupCountCustom.classList.remove('input-visited');
+    for (let i = 0; i < groupCountElement.length; i++) {
+        groupCountElement[i].classList.remove('group-count-visited');
+    }
+    groupCount7.classList.add('group-count-visited');
 });
+
+groupCountCustom.addEventListener('click', function() {
+    for (let i = 0; i < groupCountElement.length; i++) {
+        groupCountElement[i].classList.remove('group-count-visited');
+    }
+    groupCountCustom.classList.add('group-count-visited');
+})
+
 groupCountCustom.addEventListener('input', function() {
     groupCount = parseInt(groupCountCustom.value);
-    groupCountCustom.classList.add('input-visited');
-    groupCount2.classList.remove('button-visited');
-    groupCount3.classList.remove('button-visited');
-    groupCount4.classList.remove('button-visited');
-    groupCount5.classList.remove('button-visited');
-    groupCount6.classList.remove('button-visited');
-    groupCount7.classList.remove('button-visited');
 });
 
 
