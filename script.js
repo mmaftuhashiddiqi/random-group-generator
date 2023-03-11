@@ -1,81 +1,74 @@
 const inputName = document.getElementById('input-name');
 const groupCountElement = document.querySelectorAll('.group-count-element')
-const groupCount2 = document.querySelector('.group-count-2');
-const groupCount3 = document.querySelector('.group-count-3');
-const groupCount4 = document.querySelector('.group-count-4');
-const groupCount5 = document.querySelector('.group-count-5');
-const groupCount6 = document.querySelector('.group-count-6');
-const groupCount7 = document.querySelector('.group-count-7');
-const groupCountCustom = document.querySelector('.group-count-custom');
 const generateButton = document.querySelector('.generate');
 const groupResults = document.querySelector('.group-results');
 
 
 let groupCount;
 
-groupCount2.addEventListener('click', function() {
+groupCountElement[0].addEventListener('click', function() {
     groupCount = 2;
-    groupCountCustom.value = '';
+    groupCountElement[6].value = '';
     for (let i = 0; i < groupCountElement.length; i++) {
         groupCountElement[i].classList.remove('group-count-visited');
     }
-    groupCount2.classList.add('group-count-visited');
+    groupCountElement[0].classList.add('group-count-visited');
 });
 
-groupCount3.addEventListener('click', function() {
+groupCountElement[1].addEventListener('click', function() {
     groupCount = 3;
-    groupCountCustom.value = '';
+    groupCountElement[6].value = '';
     for (let i = 0; i < groupCountElement.length; i++) {
         groupCountElement[i].classList.remove('group-count-visited');
     }
-    groupCount3.classList.add('group-count-visited');
+    groupCountElement[1].classList.add('group-count-visited');
 });
 
-groupCount4.addEventListener('click', function() {
+groupCountElement[2].addEventListener('click', function() {
     groupCount = 4;
-    groupCountCustom.value = '';
+    groupCountElement[6].value = '';
     for (let i = 0; i < groupCountElement.length; i++) {
         groupCountElement[i].classList.remove('group-count-visited');
     }
-    groupCount4.classList.add('group-count-visited');
+    groupCountElement[2].classList.add('group-count-visited');
 });
 
-groupCount5.addEventListener('click', function() {
+groupCountElement[3].addEventListener('click', function() {
     groupCount = 5;
-    groupCountCustom.value = '';
+    groupCountElement[6].value = '';
     for (let i = 0; i < groupCountElement.length; i++) {
         groupCountElement[i].classList.remove('group-count-visited');
     }
-    groupCount5.classList.add('group-count-visited');
+    groupCountElement[3].classList.add('group-count-visited');
 });
 
-groupCount6.addEventListener('click', function() {
+groupCountElement[4].addEventListener('click', function() {
     groupCount = 6;
-    groupCountCustom.value = '';
+    groupCountElement[6].value = '';
     for (let i = 0; i < groupCountElement.length; i++) {
         groupCountElement[i].classList.remove('group-count-visited');
     }
-    groupCount6.classList.add('group-count-visited');
+    groupCountElement[4].classList.add('group-count-visited');
 });
 
-groupCount7.addEventListener('click', function() {
+groupCountElement[5].addEventListener('click', function() {
     groupCount = 7;
-    groupCountCustom.value = '';
+    groupCountElement[6].value = '';
     for (let i = 0; i < groupCountElement.length; i++) {
         groupCountElement[i].classList.remove('group-count-visited');
     }
-    groupCount7.classList.add('group-count-visited');
+    groupCountElement[5].classList.add('group-count-visited');
 });
 
-groupCountCustom.addEventListener('click', function() {
+groupCountElement[6].addEventListener('click', function() {
     for (let i = 0; i < groupCountElement.length; i++) {
         groupCountElement[i].classList.remove('group-count-visited');
     }
-    groupCountCustom.classList.add('group-count-visited');
+    groupCountElement[6].classList.add('group-count-visited');
 })
 
-groupCountCustom.addEventListener('input', function() {
-    groupCount = parseInt(groupCountCustom.value);
+groupCountElement[6].addEventListener('input', function() {
+    groupCount = parseInt(groupCountElement[6].value);
 });
 
 
